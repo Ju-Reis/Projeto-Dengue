@@ -1,129 +1,71 @@
  @charset "UTF-8";
 
-@media screen and (max-width: 768px) {
-
-    .outer {
-        width: 100%;
-        margin-bottom: 10px;
-        background-size: cover;
-        height: 150px;
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-        text-align: center; 
-    }
-
-    .inner {
-        padding: 10px;
-        border-radius: 5px;
-        width: 100%;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-    }
-
-    div.inner{
-        color:black;
-        background-color: rgba(0, 0, 0, 0.277);
-        font-weight: bolder;
-        margin: auto;
-        width: 70px;
-        height: 100px;
-        padding: 10px;
-        font-size: 12px;
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        text-indent: 0px;
-        
-    }
-        
-    
-    nav {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 10px 0;
-    }
+/* Estilos para o container principal */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
-@media screen and (min-width: 350px) and (max-width: 740px) {
+/* Centraliza o título */
+header > h1 {
+    margin-bottom: 0px;
+    font-size: 24px;
+    text-align: center;
+}
 
-    /* Estilos para o container principal */
-    .outer {
-        width: 100%;
-        margin-bottom: 10px;
-        background-size: cover;
-        height: 150px;
-        display: flex;
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center; /* Centraliza verticalmente */
-        text-align: center; /* Centraliza o texto */
-    }
+/* Estilos para o nav */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-    /* Estilos para o conteúdo interno */
-    .inner {
-        padding: 10px;
-        border-radius: 5px;
-        width: 100%;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-    }
+/* Lista de navegação */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
 
-    /* Ajustes específicos para o div.inner */
-    div.inner {
-        color: black;
-        background-color: rgba(0, 0, 0, 0.277);
-        font-weight: bolder;
-        margin: auto;
-        width: 70px;
-        height: 100px;
-        padding: 10px;
-        font-size: 12px;
+nav ul li {
+    margin: 0 5px;
+}
 
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para telas pequenas como iPhone 12 */
+@media (max-width: 390px) {
+    /* Centraliza o h1 no topo da tela */
+    header {
+        flex-direction: column;
         text-align: center;
-        text-indent: 0px;
     }
 
-    /* Estilos para a navegação */
-    nav {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 10px 0;
-    }
-
+    /* Garante que os itens do nav fiquem lado a lado */
     nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column; /* Itens de navegação empilhados */
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 5px 0;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
     nav ul li a {
-        color: black;
-        text-decoration: none;
-        padding: 10px 20px;
-        background-color: rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-        background-color: rgba(0, 0, 0, 0.2);
+        font-size: 14px; /* Ajusta o tamanho do texto do nav */
+        padding: 10px;
     }
 }
